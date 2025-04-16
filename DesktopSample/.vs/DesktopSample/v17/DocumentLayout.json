@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{DE9BCC0D-957A-4C6E-B7B2-9682DF5F8073}|MarketKasaApp\\MarketKasaApp.csproj|solutionrelative:marketkasaapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DE9BCC0D-957A-4C6E-B7B2-9682DF5F8073}|MarketKasaApp\\MarketKasaApp.csproj|C:\\Users\\emree\\DesktopSamples\\DesktopSample\\marketkasaapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DE9BCC0D-957A-4C6E-B7B2-9682DF5F8073}|MarketKasaApp\\MarketKasaApp.csproj|solutionrelative:marketkasaapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DE9BCC0D-957A-4C6E-B7B2-9682DF5F8073}|MarketKasaApp\\MarketKasaApp.csproj|c:\\users\\emree\\desktopsamples\\desktopsample\\marketkasaapp\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE9BCC0D-957A-4C6E-B7B2-9682DF5F8073}|MarketKasaApp\\MarketKasaApp.csproj|solutionrelative:marketkasaapp\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE9BCC0D-957A-4C6E-B7B2-9682DF5F8073}|MarketKasaApp\\MarketKasaApp.csproj|c:\\users\\emree\\desktopsamples\\desktopsample\\marketkasaapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DE9BCC0D-957A-4C6E-B7B2-9682DF5F8073}|MarketKasaApp\\MarketKasaApp.csproj|solutionrelative:marketkasaapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE9BCC0D-957A-4C6E-B7B2-9682DF5F8073}|MarketKasaApp\\MarketKasaApp.csproj|c:\\users\\emree\\desktopsamples\\desktopsample\\marketkasaapp\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DE9BCC0D-957A-4C6E-B7B2-9682DF5F8073}|MarketKasaApp\\MarketKasaApp.csproj|C:\\Users\\emree\\DesktopSamples\\DesktopSample\\marketkasaapp\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DE9BCC0D-957A-4C6E-B7B2-9682DF5F8073}|MarketKasaApp\\MarketKasaApp.csproj|solutionrelative:marketkasaapp\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -36,14 +36,14 @@
               "RelativeDocumentMoniker": "MarketKasaApp\\Form1.cs",
               "ToolTip": "C:\\Users\\emree\\DesktopSamples\\DesktopSample\\MarketKasaApp\\Form1.cs",
               "RelativeToolTip": "MarketKasaApp\\Form1.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAIUAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAQwLQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T23:59:55.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\emree\\DesktopSamples\\DesktopSample\\MarketKasaApp\\Form1.cs",
               "RelativeDocumentMoniker": "MarketKasaApp\\Form1.cs",
@@ -55,13 +55,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\emree\\DesktopSamples\\DesktopSample\\MarketKasaApp\\Form2.cs",
               "RelativeDocumentMoniker": "MarketKasaApp\\Form2.cs",
               "ToolTip": "C:\\Users\\emree\\DesktopSamples\\DesktopSample\\MarketKasaApp\\Form2.cs",
               "RelativeToolTip": "MarketKasaApp\\Form2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T01:46:41.249Z",
               "EditorCaption": ""

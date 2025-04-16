@@ -67,7 +67,7 @@ namespace MarketKasaApp
             bntNakit.Enabled = status;
         }
 
-        void Form2Cagir(Sepet sepet) 
+        void Form2Cagir(Sepet sepet)
         {
             form2 = new Form2(sepet);
             form2.Show();
@@ -91,7 +91,7 @@ namespace MarketKasaApp
 
         private void btnBakir_Click(object sender, EventArgs e)
         {
-             sepet = new Sepet("Bakýr", 1, 34);
+            sepet = new Sepet("Bakýr", 1, 34);
             //sepetim.Add(sepet);
             //SepetiGoster();
             //BtnlariKapat();
@@ -127,7 +127,7 @@ namespace MarketKasaApp
 
         private void btnGumus_Click(object sender, EventArgs e)
         {
-             sepet = new Sepet("Gümüþ", 1, 34);
+            sepet = new Sepet("Gümüþ", 1, 34);
             //sepetim.Add(sepet);
             //SepetiGoster();
             //BtnlariKapat();
@@ -157,16 +157,37 @@ namespace MarketKasaApp
         private void btnKilo_Click(object sender, EventArgs e)
         {
             //SepeteUrunEkle();
-            
+
         }
         public void SepeteUrunEkle(Sepet sepet)
         {
-           // sepet.Kilo = Convert.ToInt16(textKilo.Text);
-           // sepet.Toplam = sepet.Kilo * sepet.KiloFiyati;
+            // sepet.Kilo = Convert.ToInt16(textKilo.Text);
+            // sepet.Toplam = sepet.Kilo * sepet.KiloFiyati;
             sepetim.Add(sepet);
             SepetiGoster();
-           // Vazgec();
+            // Vazgec();
         }
 
+        private void dG1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >=0)
+            {
+                string urunadi= dG1.Rows[e.RowIndex].Cells["Urunadi"].Value.ToString();
+
+                if (MessageBox.Show($"{urunadi} adlý ürünü silmek ister misin", "Sil!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    sepetim.RemoveAt(e.RowIndex);
+                    SepetiGoster();
+                }
+                else 
+                {
+                    MessageBox.Show("Ürün kaldý");
+                }
+
+
+                
+            }
+        }
     }
 }

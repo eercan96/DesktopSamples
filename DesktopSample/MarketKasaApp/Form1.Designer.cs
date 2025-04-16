@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             btnDemir = new Button();
             btnBakir = new Button();
             btnGumus = new Button();
@@ -37,6 +38,7 @@
             bntNakit = new Button();
             bntKredi = new Button();
             dG1 = new DataGridView();
+            Sil = new DataGridViewButtonColumn();
             lbToplam = new Label();
             gBAdet = new GroupBox();
             btnVazgec = new Button();
@@ -151,13 +153,24 @@
             dG1.AllowUserToResizeRows = false;
             dG1.BackgroundColor = SystemColors.ButtonFace;
             dG1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dG1.Location = new Point(636, 2);
+            dG1.Columns.AddRange(new DataGridViewColumn[] { Sil });
+            dG1.Location = new Point(566, 2);
             dG1.Name = "dG1";
             dG1.RowHeadersVisible = false;
             dG1.RowTemplate.Height = 25;
-            dG1.Size = new Size(453, 402);
+            dG1.Size = new Size(535, 389);
             dG1.TabIndex = 8;
             dG1.TabStop = false;
+            dG1.CellContentClick += dG1_CellContentClick;
+            // 
+            // Sil
+            // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = "Sil";
+            Sil.DefaultCellStyle = dataGridViewCellStyle1;
+            Sil.HeaderText = "Sil";
+            Sil.Name = "Sil";
+            Sil.Text = "Sil";
             // 
             // lbToplam
             // 
@@ -176,7 +189,7 @@
             gBAdet.Controls.Add(btnKilo);
             gBAdet.Controls.Add(textKilo);
             gBAdet.Controls.Add(label1);
-            gBAdet.Location = new Point(387, 137);
+            gBAdet.Location = new Point(350, 137);
             gBAdet.Name = "gBAdet";
             gBAdet.Size = new Size(200, 173);
             gBAdet.TabIndex = 10;
@@ -281,5 +294,6 @@
         private Label label1;
         private Button btnVazgec;
         private Button btnFormKapat;
+        private DataGridViewButtonColumn Sil;
     }
 }
