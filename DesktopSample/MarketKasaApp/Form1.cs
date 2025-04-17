@@ -1,3 +1,4 @@
+using Excel = Microsoft.Office.Interop.Excel;
 namespace MarketKasaApp
 {
     public partial class Form1 : Form
@@ -16,6 +17,61 @@ namespace MarketKasaApp
         private void Form1_Load(object sender, EventArgs e)
         {
             SepetToplami();
+
+        }
+        void FisOlustur(string message)
+        {
+            Excel.Application excel = new Excel.Application();
+
+            object Misssing = Type.Missing;
+            Excel.Workbook workbook = excel.Workbooks.Add(Misssing);
+            Excel.Worksheet worksheet =(Excel.Worksheet)excel.Sheets[1];
+
+            worksheet.Range["A1"].Value = "#";
+            worksheet.Range["B1"].Value = "Ürün Adý";
+            worksheet.Range["C1"].Value = "Kilo";
+            worksheet.Range["D1"].Value = "Kilo Fiyatý";
+            worksheet.Range["E1"].Value = "Toplam Tutar";
+
+            worksheet.Range["A1"].ColumnWidth = 3.4;
+            worksheet.Range["B1"].ColumnWidth = 14;
+            worksheet.Range["C1"].ColumnWidth = 5;
+            worksheet.Range["D1"].ColumnWidth = 11;
+            worksheet.Range["E1"].ColumnWidth = 14;
+
+            worksheet.Range["A1:E1"].Font.ColorIndex = 9;
+
+            int rowCount = worksheet.Range["A" + worksheet.Rows.Count].End[Excel.XlDirection.xlUp].Row;
+            rowCount++;
+
+            for (int i = 0; i < sepetim.Count; i++)
+            {
+                worksheet.Range["A" +rowCount].Value = (i + 1);
+                worksheet.Range["B" +rowCount].Value = sepetim[i].Urunadi;
+                worksheet.Range["C" +rowCount].Value = sepetim[i].Kilo;
+                worksheet.Range["D" +rowCount].Value = sepetim[i].KiloFiyati;
+                worksheet.Range["E" +rowCount].Value = sepetim[i].Toplam;
+                rowCount++;
+
+            }
+
+            worksheet.Range["A1:E" + (rowCount - 1)].Borders.LineStyle = 1;
+
+            worksheet.Range["E" + rowCount].Formula = "=Sum(E2:E" + (rowCount - 1) + ")";
+
+            worksheet.Range["E" + rowCount].Borders.LineStyle = 1;
+            rowCount++;
+
+            worksheet.Range["A" + rowCount].Value = message;
+            worksheet.Range["A" + rowCount+":E"+rowCount].MergeCells = true;
+
+            worksheet.Range["D2:E" + rowCount].NumberFormat = "#,##0.00";
+
+            //worksheet.PrintOutEx(); //yazýcý
+
+
+            excel.Visible = true;
+
 
         }
 
@@ -142,12 +198,34 @@ namespace MarketKasaApp
         private void bntKredi_Click(object sender, EventArgs e)
         {
 
+            MesajGoster("Sepetteki ürünler kredi kartý ile ödendi");
         }
 
         private void bntNakit_Click(object sender, EventArgs e)
         {
-
+            MesajGoster("Sepetteki ürünler nakit olarak ödendi");
         }
+
+
+
+        void MesajGoster(string message)
+        {
+            if (sepetim.Count > 0)
+            {
+                FisOlustur(message);
+                return;
+
+                sepetim = new List<Sepet>();
+                SepetiGoster();
+                MessageBox.Show(message, "Ödeme Yapýldý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else 
+            {
+                MessageBox.Show("Sepette ürün yok"," Hata", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            
+        }
+
 
         private void btnFormKapat_Click(object sender, EventArgs e)
         {
